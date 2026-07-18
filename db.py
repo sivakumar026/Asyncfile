@@ -20,7 +20,7 @@ try:
     cursor.execute("SELECT * FROM products")
     products = cursor.fetchall()
 
-    print("\nProducts")
+    print("Products")
     for row in products:
         print(row)
 
