@@ -1,3 +1,5 @@
+import time
+
 from db import employees, products
 from csv_reader import read_csv
 from doc_reader import read_docx
@@ -27,8 +29,15 @@ def fetch_all():
 
 
 if __name__ == "__main__":
+
+    start_time = time.perf_counter()
+
     all_data = fetch_all()
+
+    end_time = time.perf_counter()
 
     for source, content in all_data.items():
         print(f"\n========== {source.upper()} ==========")
         print(content)
+
+    print(f"\nSequential Fetch Time: {end_time - start_time:.4f} seconds")
