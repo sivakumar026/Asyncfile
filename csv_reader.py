@@ -1,10 +1,16 @@
 import pandas as pd
 
-sales = pd.read_csv("data/csv/sales.csv")
-customers = pd.read_csv("data/csv/customers.csv")
+def read_csv(file_path):
+    df = pd.read_csv(file_path)
+    return df
 
-print("Sales")
-print(sales)
 
-print("Customers")
-print(customers)
+if __name__ == "__main__":
+    sales = read_csv("data/csv/sales.csv")
+    customers = read_csv("data/csv/customers.csv")
+
+    print("===== SALES =====")
+    print(sales)
+
+    print("\n===== CUSTOMERS =====")
+    print(customers)

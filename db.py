@@ -1,34 +1,47 @@
 import psycopg2
 
-try:
-    conn = psycopg2.connect(
+
+def get_connection():
+    return psycopg2.connect(
         host="localhost",
         database="company_db",
         user="postgres",
         password="Gnanamuma@2003"
     )
 
+
+def employees():
+    conn = get_connection()
     cursor = conn.cursor()
 
     cursor.execute("SELECT * FROM employees")
-    employees = cursor.fetchall()
+    data = cursor.fetchall()
 
-    print("Employees")
-    for row in employees:
-        print(row)
+    cursor.close()
+    conn.close()
+
+    return data
+
+
+def products():
+    conn = get_connection()
+    cursor = conn.cursor()
 
     cursor.execute("SELECT * FROM products")
-    products = cursor.fetchall()
+    data = cursor.fetchall()
 
-    print("Products")
-    for row in products:
+    cursor.close()
+    conn.close()
+
+    return data
+
+
+if __name__ == "__main__":
+
+    print("Employees")
+    for row in employees():
         print(row)
 
-except Exception as e:
-    print("Error:", e)
-
-finally:
-    if 'cursor' in locals():
-        cursor.close()
-    if 'conn' in locals():
-        conn.close()
+    print("\nProducts")
+    for row in products():
+        print(row)
