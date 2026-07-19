@@ -10,23 +10,23 @@ from web_reader import read_webpage
 
 async def fetch_all():
     tasks = [
-        # PostgreSQL
+        
         asyncio.to_thread(employees),
         asyncio.to_thread(products),
 
-        # CSV Files
+        
         asyncio.to_thread(read_csv, "data/csv/sales.csv"),
         asyncio.to_thread(read_csv, "data/csv/customers.csv"),
 
-        # DOCX Files
+        
         asyncio.to_thread(read_docx, "data/docx/report.docx"),
         asyncio.to_thread(read_docx, "data/docx/meeting.docx"),
 
-        # PDF Files
+        
         asyncio.to_thread(read_pdf, "data/pdf/invoice.pdf"),
         asyncio.to_thread(read_pdf, "data/pdf/manual.pdf"),
 
-        # Web Pages
+        
         asyncio.to_thread(read_webpage, "https://example.com"),
         asyncio.to_thread(read_webpage, "https://www.python.org"),
     ]
@@ -54,10 +54,6 @@ async def main():
 
     end = time.perf_counter()
 
-    print("\n" + "=" * 70)
-    print("ALL DATA LOADED")
-    print("=" * 70)
-
     for key, value in all_data.items():
         print(f"\n========== {key.upper()} ==========")
 
@@ -67,9 +63,8 @@ async def main():
         else:
             print(value)
 
-    print("\n" + "=" * 70)
+    
     print(f"Execution Time: {end - start:.2f} seconds")
-    print("=" * 70)
 
 
 if __name__ == "__main__":

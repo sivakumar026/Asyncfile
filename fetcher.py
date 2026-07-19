@@ -37,7 +37,7 @@ if __name__ == "__main__":
     end_time = time.perf_counter()
 
     for source, content in all_data.items():
-        print(f"\n========== {source.upper()} ==========")
+        print(f"\n===== {source.upper()} =====")
         print(content)
 
     print(f"\nSequential Fetch Time: {end_time - start_time:.4f} seconds")

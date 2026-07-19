@@ -14,7 +14,7 @@ def read_webpage(url):
 
     text = ""
 
-    for p in paragraphs[:3]:  # First 3 paragraphs
+    for p in paragraphs[:3]: 
         text += p.get_text() + "\n"
 
     return {

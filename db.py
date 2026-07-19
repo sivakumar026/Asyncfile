@@ -44,6 +44,6 @@ if __name__ == "__main__":
     for row in employees():
         print(row)
 
-    print("\nProducts")
+    print("Products")
     for row in products():
         print(row)
