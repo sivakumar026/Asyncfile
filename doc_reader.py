@@ -1,6 +1,8 @@
 from docx import Document
+import time
 
 def read_docx(file_path):
+    time.sleep(1)
     document = Document(file_path)
 
     text = []

@@ -1,8 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
-
+import time
 
 def read_webpage(url):
+    time.sleep(1)
     response = requests.get(url, timeout=10)
 
     soup = BeautifulSoup(response.text, "html.parser")

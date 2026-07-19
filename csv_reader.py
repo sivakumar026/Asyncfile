@@ -1,6 +1,8 @@
 import pandas as pd
+import time
 
 def read_csv(file_path):
+    time.sleep(1)
     df = pd.read_csv(file_path)
     return df
 

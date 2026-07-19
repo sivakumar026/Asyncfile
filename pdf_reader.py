@@ -1,7 +1,8 @@
 from PyPDF2 import PdfReader
-
+import time
 
 def read_pdf(file_path):
+    time.sleep(1)
     reader = PdfReader(file_path)
 
     text = []

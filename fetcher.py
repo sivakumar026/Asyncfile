@@ -9,8 +9,8 @@ from web_reader import read_webpage
 
 def fetch_all():
     data = {
-        "employees": employees,
-        "products": products,
+        "employees": employees(),
+        "products": products(),
 
         "sales_csv": read_csv("data/csv/sales.csv"),
         "customers_csv": read_csv("data/csv/customers.csv"),

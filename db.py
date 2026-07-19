@@ -1,5 +1,5 @@
 import psycopg2
-
+import time
 
 def get_connection():
     return psycopg2.connect(
@@ -11,6 +11,7 @@ def get_connection():
 
 
 def employees():
+    time.sleep(1)
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -24,6 +25,7 @@ def employees():
 
 
 def products():
+    time.sleep(1)
     conn = get_connection()
     cursor = conn.cursor()
 
