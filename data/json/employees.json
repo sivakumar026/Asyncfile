@@ -1,0 +1,37 @@
+[
+    {
+        "employee_id": 101,
+        "name": "John",
+        "department": "IT",
+        "designation": "Software Engineer",
+        "salary": 65000
+    },
+    {
+        "employee_id": 102,
+        "name": "Alice",
+        "department": "HR",
+        "designation": "HR Manager",
+        "salary": 55000
+    },
+    {
+        "employee_id": 103,
+        "name": "Bob",
+        "department": "Finance",
+        "designation": "Accountant",
+        "salary": 70000
+    },
+    {
+        "employee_id": 104,
+        "name": "Emma",
+        "department": "Marketing",
+        "designation": "Marketing Executive",
+        "salary": 60000
+    },
+    {
+        "employee_id": 105,
+        "name": "David",
+        "department": "Sales",
+        "designation": "Sales Executive",
+        "salary": 58000
+    }
+]

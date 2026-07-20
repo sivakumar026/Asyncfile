@@ -1,0 +1,10 @@
+Concurrent Data Fetcher Project
+
+Objectives
+- Read data from multiple file formats
+- Compare sequential and concurrent fetching
+- Display results in Streamlit
+- Measure execution time
+
+Prepared by:
+Sivakumar

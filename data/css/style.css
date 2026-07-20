@@ -1,0 +1,13 @@
+.container{
+    width:80%;
+    margin:auto;
+}
+.card{
+    border:1px solid gray;
+    padding:15px;
+    border-radius:10px;
+}
+button{
+    background:green;
+    color:white;
+}
