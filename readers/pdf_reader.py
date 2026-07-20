@@ -13,11 +13,12 @@ def read_pdf(file_path):
     return "\n".join(text)
 
 
-invoice = read_pdf("data/pdf/invoice.pdf")
-manual = read_pdf("data/pdf/manual.pdf")
+if __name__ == "__main__":
+    invoice = read_pdf("data/pdf/invoice.pdf")
+    manual = read_pdf("data/pdf/manual.pdf")
 
-print("===== INVOICE =====")
-print(invoice)
+    print("===== INVOICE =====")
+    print(invoice)
 
-print("===== MANUAL =====")
-print(manual)
+    print("===== MANUAL =====")
+    print(manual)

@@ -2,7 +2,7 @@ import json
 import time
 
 
-def read_json(file_path):
+def reader_json(file_path):
     time.sleep(1)
 
     with open(file_path, "r", encoding="utf-8") as file:
@@ -11,9 +11,10 @@ def read_json(file_path):
     return data
 
 
-json_data = read_json("../data/json/employees.json")
+if __name__ == "__main__":
+    json_data = reader_json("../data/json/employees.json")
 
-print("===== JSON FILE =====")
+    print("===== JSON FILE =====")
 
-for employee in json_data:
-    print(employee)
+    for employee in json_data:
+        print(employee)

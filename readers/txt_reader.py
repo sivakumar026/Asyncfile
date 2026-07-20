@@ -10,7 +10,8 @@ def read_txt(file_path):
     return text
 
 
-notes = read_txt("../data/txt/project_objectives.txt")
+if __name__ == "__main__":
+    notes = read_txt("../data/txt/project_objectives.txt")
 
-print("===== TEXT FILE =====")
-print(notes)
+    print("===== TEXT FILE =====")
+    print(notes)

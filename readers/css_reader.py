@@ -10,7 +10,8 @@ def read_css(file_path):
     return css
 
 
-style = read_css("../data/css/style.css")
+if __name__ == "__main__":
+    style = read_css("../data/css/style.css")
 
-print("===== CSS FILE =====")
-print(style)
+    print("===== CSS FILE =====")
+    print(style)

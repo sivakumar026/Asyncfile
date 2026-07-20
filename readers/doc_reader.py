@@ -13,11 +13,12 @@ def read_docx(file_path):
     return "\n".join(text)
 
 
-report = read_docx("data/docx/report.docx")
-meeting = read_docx("data/docx/meeting.docx")
+if __name__ == "__main__":
+    report = read_docx("data/docx/report.docx")
+    meeting = read_docx("data/docx/meeting.docx")
 
-print("===== REPORT =====")
-print(report)
+    print("===== REPORT =====")
+    print(report)
 
-print("===== MEETING =====")
-print(meeting)
+    print("===== MEETING =====")
+    print(meeting)

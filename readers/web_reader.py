@@ -23,11 +23,12 @@ def read_webpage(url):
     }
 
 
-page1 = read_webpage("https://www.indmoney.com/")
-page2 = read_webpage("https://www.indmoney.com/")
+if __name__ == "__main__":
+    page1 = read_webpage("https://www.indmoney.com/")
+    page2 = read_webpage("https://www.indmoney.com/")
 
-print("===== EXAMPLE =====")
-print(page1)
+    print("===== EXAMPLE =====")
+    print(page1)
 
-print("\n===== Example =====")
-print(page2)
+    print("\n===== Example =====")
+    print(page2)

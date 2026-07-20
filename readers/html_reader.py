@@ -25,7 +25,8 @@ def read_html(file_path):
     }
 
 
-page = read_html("../data/html/index.html")
+if __name__ == "__main__":
+    page = read_html("../data/html/index.html")
 
-print("===== HTML FILE =====")
-print(page)
+    print("===== HTML FILE =====")
+    print(page)

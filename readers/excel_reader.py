@@ -10,9 +10,10 @@ def read_excel(file_path):
     return df.to_dict(orient="records")
 
 
-excel_data = read_excel("../data/excel/employees.xlsx")
+if __name__ == "__main__":
+    excel_data = read_excel("../data/excel/employees.xlsx")
 
-print("===== EXCEL FILE =====")
+    print("===== EXCEL FILE =====")
 
-for row in excel_data:
-    print(row)
+    for row in excel_data:
+        print(row)
