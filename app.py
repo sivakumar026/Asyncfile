@@ -2,8 +2,8 @@ import time
 import asyncio
 import streamlit as st
 
-from fetcher import fetch_all as sequential_fetch
-from async_fetcher import fetch_all as concurrent_fetch
+from readers.fetcher import fetch_all as sequential_fetch
+from readers.async_fetcher import fetch_all as concurrent_fetch
 
 st.set_page_config(page_title="Concurrent Data Fetcher", layout="wide")
 
@@ -13,7 +13,7 @@ if st.button("Fetch Data"):
 
     col1, col2 = st.columns(2)
 
-    # ---------------- Sequential ----------------
+    # Sequential 
     with col1:
         st.subheader("Sequential Fetch")
 
@@ -27,7 +27,7 @@ if st.button("Fetch Data"):
             with st.expander(key):
                 st.write(value)
 
-    # ---------------- Concurrent ----------------
+    # Concurrent 
     with col2:
         st.subheader("Concurrent Fetch")
 
@@ -37,13 +37,13 @@ if st.button("Fetch Data"):
 
         st.metric("Execution Time", f"{async_time:.4f} sec")
 
-        # If your async fetch returns a dictionary
+        
         if isinstance(async_data, dict):
             for key, value in async_data.items():
                 with st.expander(key):
                     st.write(value)
 
-        # If your async fetch returns a list
+        
         else:
             for i, value in enumerate(async_data, start=1):
                 with st.expander(f"Result {i}"):

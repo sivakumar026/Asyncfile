@@ -1,10 +1,10 @@
 import time
 
-from db import employees, products
-from csv_reader import read_csv
-from doc_reader import read_docx
-from pdf_reader import read_pdf
-from web_reader import read_webpage
+from readers.db import employees, products
+from readers.csv_reader import read_csv
+from readers.doc_reader import read_docx
+from readers.pdf_reader import read_pdf
+from readers.web_reader import read_webpage
 
 
 def fetch_all():

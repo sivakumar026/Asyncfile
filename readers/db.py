@@ -14,7 +14,6 @@ def employees():
     time.sleep(1)
     conn = get_connection()
     cursor = conn.cursor()
-
     cursor.execute("SELECT * FROM employees")
     data = cursor.fetchall()
 
